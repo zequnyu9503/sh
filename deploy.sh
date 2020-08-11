@@ -11,7 +11,9 @@ do
     # scp -r "/opt/service/maven-3.6.3" "root@${slave}:/opt/service/"
     # scp -r "/opt/service/scala-2.11.12" "root@${slave}:/opt/service/"
     # scp -r "/opt/service/spark/spark-2.4.4" "root@${slave}:/opt/service/spark/"
-    scp -r "/opt/service/spark" "root@${slave}:/opt/service/"
+    # scp -r "/opt/service/spark" "root@${slave}:/opt/service/"
+    ssh root@${slave} "cd /opt/service/ && rm -rf spark && mkdir -p spark/spark-local"
+    scp -r "/opt/service/spark/spark-2.4.4" "root@${slave}:/opt/service/spark"
 
     # scp /root/.bashrc "root@${slave}:/root/"
     # ssh root@${slave} "source /root/.bashrc"
