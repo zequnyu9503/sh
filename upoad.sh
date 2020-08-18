@@ -1,5 +1,5 @@
 #!/bin/bash
-store="/home/zc/yzq/downloads/twitter/data/2019-4/"
+store="/opt/zequnyu/data/2019-04/"
 for file in $(ls ${store})
  do
   hdfs dfs -put ${store}${file} /real-world/
