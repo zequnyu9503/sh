@@ -4,7 +4,7 @@ base_dir="/opt/zequnyu/data/"
 store="/opt/zequnyu/data/2019-04/"
 n=0
 
-for d in {100..101}
+for d in {100..100}
 do
  tar -xf ${base_dir}"twitter_stream_2019_04_"${d:1}".tar" -C ${base_dir}
  let n=0
