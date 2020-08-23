@@ -10,4 +10,4 @@ spark-shell \
 --driver-memory 32g \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
-${libs_dir}/fastjson-1.2.35.jar \
+${libs_dir}/fastjson-1.2.35.jar
