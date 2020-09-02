@@ -7,6 +7,6 @@ spark-submit \
 --executor-cores 32 \
 --driver-cores 16 \
 --driver-memory 16g \
---class pers.yzq.timewindow.SentimentClassification \
+--class pers.yzq.sliding.Demo \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 /opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar
