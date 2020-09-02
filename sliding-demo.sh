@@ -9,4 +9,4 @@ spark-submit \
 --driver-memory 16g \
 --class pers.yzq.timewindow.SentimentClassification \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
-/opt/service/spark/slidingwindow/sliding/target/timewindow-2.4.4.jar
+/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar
