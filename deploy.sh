@@ -2,7 +2,7 @@
 master="node6"
 slaves=("node7" "node8" "node9" "node10" "node11" )
 
-ssh root@${master} "chmod 777 /opt/service/spark/spark-2.4.4/sbin/* && chmod 777 /opt/service/spark/spark-2.4.4/bin/*"
+# ssh root@${master} "chmod 777 /opt/service/spark/spark-2.4.4/sbin/* && chmod 777 /opt/service/spark/spark-2.4.4/bin/*"
 
 for slave in ${slaves[@]}
 do
