@@ -17,8 +17,8 @@ do
     # ssh root@${slave} "cd /opt/service/ && rm -rf spark && mkdir -p spark/spark-local"
     # scp -r "/opt/service/spark/spark-2.4.4" "root@${slave}:/opt/service/spark"
     # ssh root@${slave} "chmod 777 /opt/service/spark/spark-2.4.4/sbin/* && chmod 777 /opt/service/spark/spark-2.4.4/bin/*"
-#     scp /root/.bashrc "root@${slave}:/root/"
-#     ssh root@${slave} "source /root/.bashrc"
-    scp /opt/service/hbase-2.3.1/conf/hbase-site.xml root@${slave}:/opt/service/hbase-2.3.1/conf/
+     scp /root/.bashrc "root@${slave}:/root/"
+     ssh root@${slave} "source /root/.bashrc"
+    # scp /opt/service/hbase-2.3.1/conf/hbase-site.xml root@${slave}:/opt/service/hbase-2.3.1/conf/
 
 done
