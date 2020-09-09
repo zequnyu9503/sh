@@ -20,6 +20,6 @@ do
      # scp /root/.bashrc "root@${slave}:/root/"
      # ssh root@${slave} "source /root/.bashrc"
       # scp /opt/service/hbase-2.1.4/conf/hbase-site.xml root@${slave}:/opt/service/hbase-2.1.4/conf/
-      ssh root@${slave} rm -rf /opt/service/hbase-2.1.4
+      # ssh root@${slave} rm -rf /opt/service/hbase-2.1.4
       scp -r /opt/service/hbase-2.1.4 root@${slave} rm -rf /opt/service/
 done
