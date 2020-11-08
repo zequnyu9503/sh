@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# 关闭Spark集群主从节点和历史进程.
+
 SPARK_HOME="/opt/service/spark/spark-2.4.4"
 
 if [[ $(hostname) -eq "node6" ]];then
