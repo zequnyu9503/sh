@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-slaves=("node6" "node7" )
+slaves=("node6" "node7 node8" )
 
 path="/opt/service/spark/slidingwindow"
 
