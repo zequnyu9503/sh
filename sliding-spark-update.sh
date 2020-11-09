@@ -5,5 +5,5 @@ path="/opt/service/spark/slidingwindow"
 
 for slave in ${slaves[@]}
 do
-    ssh root@${slave} "cd ${path} && git pull && mvn clean install -DskipTests -pl core,assembly" &
+    ssh root@${slave} "cd ${path} && git pull && mvn clean install -DskipTests -pl core,sliding,assembly" &
 done
