@@ -1,4 +1,13 @@
 #!/usr/bin/env bash
 path="/opt/service/spark/slidingwindow"
-echo "只更新Core和Assembly"
-cd ${path} && git pull && mvn clean install -DskipTests -pl core,assembly,sliding
+slaves=("node6 node9 node10 node11")
+
+echo "更新node6 node9 node10 node11"
+echo "只更新Core, Assembly和Sliding"
+
+for slave in ${slaves[@]}
+ do
+  ssh root@${slave} "cd ${path};git pull;mvn clean install -DskipTests -pl core,sliding,assembly" &
+ done
+wait
+echo "更新完毕"
