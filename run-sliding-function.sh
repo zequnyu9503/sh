@@ -7,7 +7,7 @@ parameters="hdfs://node6:9000/real-world/trips2019.csv 10"
 spark-submit \
 --master spark://node6:7079 \
 --executor-memory 32g \
---executor-cores 32 \
+--executor-cores 2 \
 --driver-cores 16 \
 --driver-memory 16g \
 --class pers.yzq.sliding.debug.Function \
