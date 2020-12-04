@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-mvn dependency:copy-dependencies -DoutputDirectory=./libs
+# mvn dependency:copy-dependencies -DoutputDirectory=./libs
+git pull
