@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-slaves=("node7 node8")
+slaves=("node9 node10 node11")
 
 MASTER_URL="spark://node6:7079"
 SPARK_HOME="/opt/service/spark/slidingwindow"
