@@ -2,7 +2,7 @@
 libs_dir="hdfs://node6:9000/libs"
 log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
 target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
-parameters="hdfs://node6:9000/real-world/trips2019.csv 10"
+parameters="hdfs://node6:9000/real-world/trips2019.csv bunch heuristic"
 
 spark-submit \
 --master spark://node6:7079 \
