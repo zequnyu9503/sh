@@ -1,10 +1,11 @@
 #!/bin/bash
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/raw/"
-store="/opt/zequnyu/data/"
-total=1
+store="/opt/zequnyu/data/2019-04/"
+total=10
 
 # 执行过程.
+echo "解压缩文件数量从1到${total}"
 days=$(seq -f "%02g" 1 ${total})
 for day in ${days[@]}
 do
@@ -26,13 +27,13 @@ do
             printf "#"
         done
         # 所有文件解压完毕后拷贝.
-        echo "解压完毕, 开始拷贝: "
+        echo "\n解压完毕, 开始拷贝: "
         for file in $(ls ./)
         do
             cat $(pwd)/${file} >> ${store}"2019-4-"${day}".json"
             printf "#"
         done
-        echo "拷贝完毕 "
+        echo "\n拷贝完毕 "
         cd ../
     done
     # 退出day目录.
