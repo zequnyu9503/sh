@@ -9,6 +9,7 @@ echo "解压缩文件数量从1到${total}"
 days=$(seq -f "%02g" 1 ${total})
 for day in ${days[@]}
 do
+    echo "文件twitter_stream_2019_04_"${day}".tar"
     # 解压至根目录.
     tar -xf ${base_dir}"twitter_stream_2019_04_"${day}".tar" -C ${base_dir}
     # 进入day目录.
@@ -27,13 +28,13 @@ do
             printf "#"
         done
         # 所有文件解压完毕后拷贝.
-        echo "\n解压完毕, 开始拷贝: "
+        echo -e "\n解压完毕, 开始拷贝: "
         for file in $(ls ./)
         do
-            cat $(pwd)/${file} >> ${store}"2019-4-"${day}".json"
+            cat $(pwd)/${file} >> ${store}"2019-04-"${day}".json"
             printf "#"
         done
-        echo "\n拷贝完毕 "
+        echo -e "\n拷贝完毕 "
         cd ../
     done
     # 退出day目录.
