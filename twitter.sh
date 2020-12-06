@@ -1,10 +1,10 @@
 #!/bin/bash
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/"
-store="/opt/zequnyu/data/2019-04/"
+store="/opt/zequnyu/data/raw/"
 n=0
 
-for d in {116..120}
+for d in {101..101}
 do
  tar -xf ${base_dir}"twitter_stream_2019_04_"${d:1}".tar" -C ${base_dir}
  let n=0
