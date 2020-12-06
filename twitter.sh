@@ -2,7 +2,7 @@
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/"
 store="/opt/zequnyu/data/raw/"
-total=10
+total=1
 
 # 执行过程.
 days=$(seq -w 1 ${total})
