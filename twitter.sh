@@ -5,7 +5,7 @@ store="/opt/zequnyu/data/raw/"
 total=1
 
 # 执行过程.
-days=$(seq -w 1 ${total})
+days=$(seq -f "%02g" 1 ${total})
 for day in ${days[@]}
 do
     # 解压至根目录.
