@@ -1,7 +1,7 @@
 #!/bin/bash
 # 确保根目录和输出目录存在.
-base_dir="/opt/zequnyu/data/"
-store="/opt/zequnyu/data/raw/"
+base_dir="/opt/zequnyu/data/raw/"
+store="/opt/zequnyu/data/"
 total=1
 
 # 执行过程.
