@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 path="/opt/service/spark/slidingwindow"
-slaves=("node6 node9 node10 node11")
+slaves=("node6")
 
 echo "更新node6 node9 node10 node11"
 echo "只更新Sliding"
