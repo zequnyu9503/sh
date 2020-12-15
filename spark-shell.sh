@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 libs_dir="hdfs://node6:9000/libs"
-log_path="/opt/service/spark/spark-2.4.4/conf/log4j.properties"
+log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
 
 spark-shell \
 --master spark://node6:7079 \

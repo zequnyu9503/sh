@@ -5,10 +5,10 @@
 slaves=("node7" "node8" "node9" "node10" "node11")
 
 MASTER_URL="spark://node6:7079"
-SPARK_HOME="/opt/service/spark/spark-2.4.4"
+SPARK_HOME="/opt/service/spark/slidingwindow"
 
 if [[ $(hostname) = "node6" ]];then
-echo "Launch Spark-2.4.4 on Master node."
+echo "Launch SlidingWindow on Master node."
 sh "${SPARK_HOME}/sbin/start-master.sh"
 
 for slave in ${slaves[@]}

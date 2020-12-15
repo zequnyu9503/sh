@@ -2,7 +2,7 @@
 master="node6"
 slaves=("node7" "node8" "node9" "node10" "node11" )
 
-path="/opt/service/spark/spark-2.4.4"
+path="/opt/service/spark/slidingwindow"
 
 for slave in ${slaves[@]}
 do

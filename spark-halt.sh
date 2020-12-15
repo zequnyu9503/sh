@@ -2,7 +2,7 @@
 
 # 关闭Spark集群主从节点和历史进程.
 
-SPARK_HOME="/opt/service/spark/spark-2.4.4"
+SPARK_HOME="/opt/service/spark/slidingwindow"
 
 if [[ $(hostname) -eq "node6" ]];then
 echo "Spark comes to a halt on Master node."
