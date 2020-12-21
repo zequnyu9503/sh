@@ -4,6 +4,6 @@ slaves=("node7" "node8" "node9" "node10" "node11" "node12" "node13" "node14" "no
 
 for slave in ${slaves[@]}
  do
-  scp "${path}slaves" root@node${slave}:${path}
+  scp "${path}slaves" root@${slave}:${path}
  done
 echo "更新完毕"
