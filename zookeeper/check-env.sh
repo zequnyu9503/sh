@@ -11,6 +11,9 @@ do
   if ssh root@${slave} "[ ! -d ${ROOT}/zoodir ]"; then
       ssh root@${slave} "mkdir -p ${ROOT}/zoodir"
   fi
+
+  ssh root@${slave} "rm -rf ${ROOT}/zoodir/*"
+
   if [ ${slave} = "node1" ]; then
     ssh root@${slave} "echo '0' > ${ROOT}/zoodir/myid"
   fi
