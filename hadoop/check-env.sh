@@ -8,20 +8,9 @@ slaves=("node1" "node7" "node8" "node9" "node10" "node11" "node12" "node13" "nod
 
 for slave in ${slaves[@]}
 do
-if [ ! -d "${ROOT}/namenode" ]; then
-    mkdir -p "${ROOT}/namenode"
-  else
-    rm -rf "${ROOT}/namenode"
-fi
-
-if [ ! -d "${ROOT}/datanode" ]; then
-    mkdir -p "${ROOT}/datanode"
-  else
-    rm -rf "${ROOT}/datanode"
-fi
-
-if [ ! -d "${ROOT}/hadoop-pid-dir" ]; then
-  mkdir -p "${ROOT}/hadoop-pid-dir"
-fi
+ ssh root@${slave} "if [ ! -d ${ROOT}/namenode ] then mkdir -p ${ROOT}/namenode else rm -rf ${ROOT}/namenode fi"
+ ssh root@${slave} "if [ ! -d ${ROOT}/datanode ] then mkdir -p ${ROOT}/datanode else rm -rf ${ROOT}/datanode fi"
+ ssh root@${slave} "if [ ! -d ${ROOT}/hadoop-pid-dir ] then mkdir -p ${ROOT}/hadoop-pid-dir else rm -rf ${ROOT}/hadoop-pid-dir fi"
 done
+echo "$(env | grep HADOOP)"
 echo "检查完毕"
