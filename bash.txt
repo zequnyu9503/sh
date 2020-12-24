@@ -1,0 +1,4 @@
+scp -r root@node1:/opt/service/hadoop-2.7.7 ./
+scp -r root@node1:/opt/service/hbase-2.1.4 ./
+scp -r root@node1:/opt/service/zookeeper-3.5.5 ./
+rm -rf hadoop-2.8.5 hbase-2.3.3 zookeeper-3.4.14
