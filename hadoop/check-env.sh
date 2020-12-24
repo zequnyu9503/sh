@@ -8,7 +8,7 @@ slaves=("node1" "node7" "node8" "node9" "node10" "node11" "node12" "node13" "nod
 
 for slave in ${slaves[@]}
 do
-  if ssh root@${slave} '[ -d ${ROOT}/namenode ]'; then
+  if ssh root@${slave} "[ ! -d ${ROOT}/namenode ]"; then
     echo "a"
   fi
  #ssh root@${slave} "if [ ! -d ${ROOT}/namenode ]; then mkdir -p ${ROOT}/namenode; else rm -rf ${ROOT}/namenode fi"
