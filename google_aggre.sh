@@ -9,5 +9,6 @@ cd /opt/zequnyu/task_events
 for file in $(ls ./)
 do
   cat ${file} >> ${TARGET}
+  printf "#"
 done
 hdfs dfs -put ${TARGET} /google/task_events/
