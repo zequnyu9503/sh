@@ -2,6 +2,7 @@
 
 TARGET="/opt/zequnyu/task_event.csv"
 if [ -f ${TARGET} ]; then
+  echo "删除文件"
   rm -f ${TARGET}
 fi
 
