@@ -26,6 +26,5 @@ do
       ssh root@${slave} "rm -rf ${ROOT}/hadoop-pid-dir/*"
   fi
 
- ssh root@${slave} "echo $(env | grep HADOOP)"
+  echo "${slave} 检查完毕."
 done
-echo "检查完毕"
