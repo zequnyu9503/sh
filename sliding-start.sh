@@ -6,11 +6,13 @@ SPARK_HOME="/opt/service/spark/slidingwindow"
 
 if [[ $(hostname) = "node1" ]];then
 echo "启动Master"
+chmod 775 "${SPARK_HOME}/sbin/*" "${SPARK_HOME}/bin/*"
 sh "${SPARK_HOME}/sbin/start-master.sh"
 echo "启动Workers"
 for slave in ${slaves[@]}
  do
-  ssh "root@${slave}" sh "${SPARK_HOME}/sbin/start-slave.sh" -h ${slave} ${MASTER_URL}
+   ssh "root@${slave}" "chmod 775 ${SPARK_HOME}/sbin/* ${SPARK_HOME}/bin/* "
+   ssh "root@${slave}" "sh ${SPARK_HOME}/sbin/start-slave.sh -h ${slave} ${MASTER_URL}"
  done
 sh "${SPARK_HOME}/sbin/start-history-server.sh"
 fi
