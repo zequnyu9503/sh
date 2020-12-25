@@ -12,4 +12,4 @@ spark-submit \
 --executor-cores 16 \
 --driver-cores 16 \
 --class ${className} \
-target/spark-2.0.jar
+/opt/service/spark/spark-app/target/spark-2.0.jar
