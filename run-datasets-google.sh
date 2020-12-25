@@ -2,9 +2,7 @@
 # 类名.
 className=pers.yzq.spark.datasets.Google
 
-if [ $(hadoop fs -test -e /google/new_task_events) ]; then
-  hdfs dfs -rm -rf /google/new_task_events
-fi
+hdfs dfs -rm -r /google/new_task_events
 
 spark-submit \
 --master spark://node1:7079 \
