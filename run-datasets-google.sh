@@ -3,7 +3,7 @@
 className=pers.yzq.spark.datasets.Google
 
 if [ $(hadoop fs -test -e /google/new_task_events) ]; then
-  hdfs dfs -rm new_task_events
+  hdfs dfs -rm -rf /google/new_task_events
 fi
 
 spark-submit \
