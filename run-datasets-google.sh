@@ -2,7 +2,7 @@
 # 类名.
 className=pers.yzq.spark.datasets.Google
 
-if [-f $(hadoop fs -test -e /google/new_task_events) ]; then
+if [ $(hadoop fs -test -e /google/new_task_events) ]; then
   hdfs dfs -rm new_task_events
 fi
 
