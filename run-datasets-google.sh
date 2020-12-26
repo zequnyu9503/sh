@@ -7,7 +7,7 @@ hdfs dfs -rm -r /google/new_task_usage
 
 spark-submit \
 --master spark://node1:7079 \
---executor-memory 48g \
+--executor-memory 40g \
 --executor-cores 24 \
 --driver-cores 8 \
 --class ${className} \
