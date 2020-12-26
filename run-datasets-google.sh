@@ -2,7 +2,7 @@
 # 类名.
 className=pers.yzq.spark.datasets.Google
 
-hdfs dfs -rm -r /google/new_task_events
+# hdfs dfs -rm -r /google/new_task_events
 hdfs dfs -rm -r /google/new_task_usage
 
 spark-submit \
