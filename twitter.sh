@@ -2,11 +2,12 @@
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/raw/"
 store="/opt/zequnyu/data/2019-04/"
-total=30
+start=2
+end=30
 
 # 执行过程.
-echo "解压缩文件数量从1到${total}"
-days=$(seq -f "%02g" 1 ${total})
+echo "解压缩文件编号从${start}到${end}"
+days=$(seq -f "%02g" ${start} ${end})
 for day in ${days[@]}
 do
     echo "文件twitter_stream_2019_04_"${day}".tar"
