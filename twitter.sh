@@ -6,8 +6,8 @@ start=2
 end=30
 
 # 执行过程.
-echo "解压缩文件编号从${start}到${endl}"
-days=$(seq -f "%02g" ${start} ${total})
+echo "解压缩文件编号从${start}到${end}"
+days=$(seq -f "%02g" ${start} ${end})
 for day in ${days[@]}
 do
     echo "文件twitter_stream_2019_04_"${day}".tar"
