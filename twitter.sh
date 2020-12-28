@@ -2,7 +2,7 @@
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/raw/"
 store="/opt/zequnyu/data/2019-04/"
-start=2
+start=9
 end=30
 
 # 执行过程.
