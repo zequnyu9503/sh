@@ -3,7 +3,7 @@
 className=pers.yzq.spark.datasets.Google
 
 # hdfs dfs -rm -r /google/res_1
-hdfs dfs -rm -r /google/origin_1.txt
+hdfs dfs -rm -r /google/new_task_usage
 
 spark-submit \
 --master spark://node1:7079 \
