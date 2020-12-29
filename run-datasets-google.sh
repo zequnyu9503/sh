@@ -3,6 +3,7 @@
 className=pers.yzq.spark.datasets.Google
 
 # hdfs dfs -rm -r /google/res_1
+#
 # hdfs dfs -rm -r /google/new_task_usage
 
 spark-submit \
