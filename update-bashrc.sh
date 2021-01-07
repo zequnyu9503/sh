@@ -5,4 +5,5 @@ param=$0
 for slave in ${slaves[@]}
  do
   scp ././bashrc/node7_15 root@${slave}:/root/.bashrc
+  ssh root@${slave} source /root/.bashrc
  done
