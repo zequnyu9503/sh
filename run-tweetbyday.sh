@@ -8,8 +8,8 @@ spark-submit \
 --executor-memory 32g \
 --executor-cores 16 \
 --driver-cores 16 \
---driver-memory 16g \
---class pers.yzq.sliding.exp.MovingAverageForTweetOnHDFS \
+--driver-memory 8g \
+--class pers.yzq.sliding.dataset.TweetByDay \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
