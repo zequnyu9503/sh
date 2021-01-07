@@ -1,0 +1,31 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Private for zequnyu.
+# Not delete but comment please.
+export JAVA_HOME=/opt/service/jdk1.8.0_261
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JRE_HOME=$JAVA_HOME/jre
+export SCALA_HOME=/opt/service/scala-2.11.12
+export MAVEN_HOME=/opt/service/maven-3.6.3
+export ZOOKEEPER_HOME=/opt/service/zookeeper-3.5.5
+export HBASE_HOME=/opt/service/hbase-2.1.4
+export SPARK_HOME=/opt/service/spark/slidingwindow
+export HADOOP_HOME=/opt/service/hadoop-2.7.7
+export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
+export HADOOP_PREFIX=$HADOOP_HOME
+export HIVE_HOME=/opt/service/hive-2.3.7
+export REDIS_HOME=/user/local/
+export PATH=$PATH:$REDIS_HOME/bin:$HBASE_HOME/bin:$JAVA_HOME/bin:$SCALA_HOME/bin:$HADOOP_HOME/bin:$MAVEN_HOME/bin:$SPARK_HOME/bin:$HIVE_HOME/bin:$ZOOKEEPER_HOME/bin:
+# 2020-9-10 edited by zequnyu.
+
