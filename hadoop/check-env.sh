@@ -8,7 +8,7 @@ slaves=("node1" "node7" "node8" "node9" "node3" "node11")
 for slave in ${slaves[@]}
 do
   # 分发或更新HADOOP配置文件.
-  scp "/opt/service/hadoop-2.10.1/etc/hadoop/*" root@${slave}:"/opt/service/hadoop-2.10.1/etc/hadoop/"
+  scp /opt/service/hadoop-2.10.1/etc/hadoop/* root@${slave}:"/opt/service/hadoop-2.10.1/etc/hadoop/"
 
 
 #  if ssh root@${slave} "[ ! -d ${ROOT}/namenode ]"; then
