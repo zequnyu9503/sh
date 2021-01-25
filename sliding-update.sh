@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 path="/opt/service/spark/slidingwindow"
 # slaves=("node1 node7 node8 node9 node10 node11 node12 node13 node14 node15")
- slaves=("node1 node7 node8 node9 node10 node11")
+ slaves=("node1 node7 node8 node9 node3 node11")
 
-echo "node1 node7 node8 node9 node10 node11"
 echo "只更新Core, Assembly"
 
 for slave in ${slaves[@]}
