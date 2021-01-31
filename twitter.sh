@@ -2,7 +2,7 @@
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/tweet/"
 store="/opt/zequnyu/tweet/2019-04/"
-start=1
+start=3
 end=30
 
 # 执行过程.
