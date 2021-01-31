@@ -7,9 +7,9 @@ spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
 --executor-cores 8 \
---driver-cores 16 \
+--driver-cores 8 \
 --driver-memory 16g \
---class pers.yzq.sliding.debug.Verification \
+--class pers.yzq.sliding.debug.DemoB \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \

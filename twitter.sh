@@ -2,8 +2,8 @@
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/data/raw/"
 store="/opt/zequnyu/data/2019-04/"
-start=1
-end=5
+start=11
+end=19
 
 # 执行过程.
 echo "解压缩文件编号从${start}到${end}"

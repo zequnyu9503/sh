@@ -6,7 +6,7 @@ target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
---executor-cores 8 \
+--executor-cores 4 \
 --driver-cores 8 \
 --driver-memory 16g \
 --class pers.yzq.sliding.debug.DemoA \
