@@ -1,8 +1,8 @@
 #!/bin/bash
-store="/opt/zequnyu/data/2019-04/"
+store="/opt/zequnyu/tweet/2019-04/"
 for file in $(ls ${store})
  do
-  hdfs dfs -put ${store}${file} /real-world/
+  hdfs dfs -put ${store}${file} /real-world/backup/
   echo ${file} has been uploaded onto hdfs.
   rm ${store}${file}
   done
