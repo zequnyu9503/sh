@@ -1,8 +1,8 @@
 #!/bin/bash
 # 确保根目录和输出目录存在.
 base_dir="/opt/zequnyu/tweet/"
-store="/opt/zequnyu/tweet/2019-04/"
-start=3
+store="/opt/zequnyu/tweet/aggre.json"
+start=1
 end=30
 
 # 执行过程.
@@ -32,7 +32,8 @@ do
         echo -e "\n解压完毕, 开始拷贝: "
         for file in $(ls ./)
         do
-            cat $(pwd)/${file} >> ${store}"2019-04-"${day}".json"
+             cat $(pwd)/${file} >> ${store}
+            # cat $(pwd)/${file} >> ${store}"2019-04-"${day}".json"
             printf "#"
         done
         echo -e "\n拷贝完毕 "
