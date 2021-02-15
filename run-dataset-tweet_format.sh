@@ -19,7 +19,7 @@ spark-submit \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
-${target}
+${target} ${day}
 
 hdfs dfs -getmerge "/real-world/precise/2019-04-${day}.json" "2019-04-${day}.json"
 hdfs dfs -rm -f "/real-world/precise/2019-04-${day}.json"
