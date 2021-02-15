@@ -3,6 +3,7 @@ libs_dir="hdfs://node1:9000/libs"
 log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
 target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 
+rm -f /opt/zequnyu/sh/tweet.txt
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
