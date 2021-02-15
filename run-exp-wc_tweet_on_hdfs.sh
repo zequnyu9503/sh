@@ -9,8 +9,8 @@ spark-submit \
 --executor-cores 1 \
 --driver-cores 2 \
 --driver-memory 16g \
---class pers.yzq.sliding.dataset.WordCountOnHDFS \
+--class pers.yzq.sliding.dataset.WordCountTweetOnHDFS \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
-${target} 1 30
+${target}
