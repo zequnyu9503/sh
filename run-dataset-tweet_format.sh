@@ -5,7 +5,7 @@ target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 
 # 进入工作目录
 cd "/opt/zequnyu/tweet/"
-days=$(seq -f "%02g" 2 2)
+days=$(seq -f "%02g" 2 30)
 for day in ${days[@]}
 do
 # Spark作业
@@ -22,7 +22,7 @@ ${libs_dir}/fastjson-1.2.35.jar \
 ${target} ${day}
 
 hdfs dfs -getmerge "/real-world/precise/2019-04-${day}.json" "2019-04-${day}.json"
-hdfs dfs -rm -f "/real-world/precise/2019-04-${day}.json"
-# hdfs dfs -put "2019-04-${day}.json" "/real-world/precise/"
-# rm -rf "2019-04-${day}.json"
+hdfs dfs -rm -r "/real-world/precise/2019-04-${day}.json"
+hdfs dfs -put "2019-04-${day}.json" "/real-world/precise/"
+rm -rf "2019-04-${day}.json"
 done
