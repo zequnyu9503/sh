@@ -3,8 +3,7 @@ libs_dir="hdfs://node1:9000/libs"
 log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
 target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 
-rm -f /opt/zequnyu/sh/sink.log
-
+rm -f /opt/zequnyu/sh/1:2-3-np.data
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
@@ -15,4 +14,18 @@ spark-submit \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
-${target}
+${target} 1 3 10 false /opt/zequnyu/sh/1:1-3-np.data
+
+#rm -f /opt/zequnyu/sh/1:2-3-np.data
+#spark-submit \
+#--master spark://node1:7079 \
+#--executor-memory 32g \
+#--executor-cores 1 \
+#--driver-cores 2 \
+#--driver-memory 16g \
+#--class pers.yzq.sliding.exp.WordCountTweetOnHDFS \
+#--driver-java-options "-Dlog4j.configuration=file:${log_path}" \
+#--jars \
+#${libs_dir}/fastjson-1.2.35.jar \
+#${target} 2 3 30 true /opt/zequnyu/sh/1:2-3-np.data
+
