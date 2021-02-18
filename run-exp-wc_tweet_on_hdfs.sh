@@ -14,7 +14,7 @@ spark-submit \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
-${target} 1 3 10 false /opt/zequnyu/sh/1:1-3-np.data
+${target} 1 3 10 false /opt/zequnyu/sh/1:1-3-p.data
 
 #rm -f /opt/zequnyu/sh/1:2-3-np.data
 #spark-submit \
