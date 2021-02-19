@@ -9,7 +9,7 @@ spark-submit \
 --executor-cores 1 \
 --driver-cores 2 \
 --driver-memory 16g \
---class pers.yzq.sliding.exp.SortTweetOnHDFS_SADP \
+--class pers.yzq.sliding.exp.SVMAliOnHDFS \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
@@ -21,7 +21,19 @@ spark-submit \
 --executor-cores 1 \
 --driver-cores 2 \
 --driver-memory 16g \
---class pers.yzq.sliding.exp.SortTweetOnHDFS_PACMAN \
+--class pers.yzq.sliding.exp.SVMAliOnHDFS_SADP \
+--driver-java-options "-Dlog4j.configuration=file:${log_path}" \
+--jars \
+${libs_dir}/fastjson-1.2.35.jar \
+${target}
+
+spark-submit \
+--master spark://node1:7079 \
+--executor-memory 32g \
+--executor-cores 1 \
+--driver-cores 2 \
+--driver-memory 16g \
+--class pers.yzq.sliding.exp.SVMAliOnHDFS_PACMAN \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
