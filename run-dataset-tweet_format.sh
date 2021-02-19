@@ -5,7 +5,7 @@ target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 
 # 进入工作目录
 cd "/opt/zequnyu/tweet/"
-days=$(seq -f "%02g" 2 30)
+days=$(seq -f "%02g" 2 11)
 for day in ${days[@]}
 do
 # Spark作业
