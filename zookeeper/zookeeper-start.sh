@@ -1,5 +1,5 @@
 #!/bin/bash
-slaves=("node1" "node7" "node8" "node9" "node10" "node11" "node12" "node13" "node14" "node15" )
+slaves=("node1" "node6" "node7" "node8" "node9" "node11")
 path="/opt/service/zookeeper-3.5.5/bin/"
 
 for slave in ${slaves[@]}
