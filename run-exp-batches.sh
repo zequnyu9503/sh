@@ -40,7 +40,7 @@ spark-submit \
 --executor-cores 16 \
 --driver-cores 8 \
 --driver-memory 16g \
---class pers.yzq.sliding.exp.FIFOScheule \
+--class pers.yzq.sliding.verification.FIFOScheule \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
@@ -53,7 +53,7 @@ spark-submit \
 --executor-cores 16 \
 --driver-cores 8 \
 --driver-memory 16g \
---class pers.yzq.sliding.exp.FAIRSchedule \
+--class pers.yzq.sliding.verification.FAIRSchedule \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar \
