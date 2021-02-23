@@ -7,7 +7,7 @@ slaves=("node3 node7 node8 node9 node11")
 rm -f /opt/service/spark/slidingwindow/logs/fp*
 for slave in ${slaves[@]}
  do
-  scp root@node${slave}:/opt/service/spark/slidingwindow/logs/fp.txt /opt/service/spark/slidingwindow/logs/fp_${slave}.txt
+  scp root@${slave}:/opt/service/spark/slidingwindow/logs/fp.txt /opt/service/spark/slidingwindow/logs/fp_${slave}.txt
  done
 
 #spark-submit \
