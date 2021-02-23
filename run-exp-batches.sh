@@ -37,7 +37,7 @@ for slave in ${slaves[@]}
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
---executor-cores 16 \
+--executor-cores 1 \
 --driver-cores 8 \
 --driver-memory 16g \
 --class pers.yzq.sliding.verification.FIFOScheule \
@@ -50,7 +50,7 @@ ${target}
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
---executor-cores 16 \
+--executor-cores 1 \
 --driver-cores 8 \
 --driver-memory 16g \
 --class pers.yzq.sliding.verification.FAIRSchedule \
