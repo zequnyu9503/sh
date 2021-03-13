@@ -13,7 +13,7 @@ for slave in ${slaves[@]}
 spark-submit \
 --master spark://node1:7079 \
 --executor-memory 32g \
---executor-cores 1 \
+--executor-cores 8 \
 --driver-cores 8 \
 --driver-memory 16g \
 --class pers.yzq.sliding.appendix.MultiWorkload \
