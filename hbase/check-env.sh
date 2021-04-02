@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 ROOT="/opt/service"
 
-echo "主节点是node1"
-echo "从节点是node7,node8,node9,node10,node11,node12,node13,node14,node15"
+echo "主节点是node5"
+echo "从节点是node6,node7,node8,node9,node10"
 
-slaves=("node1" "node7" "node8" "node9" "node10" "node11" "node12" "node13" "node14" "node15")
+slaves=("node6" "node7" "node8" "node9" "node10")
 
 for slave in ${slaves[@]}
 do

@@ -1,9 +1,9 @@
 #!/bin/bash
 # 确保根目录和输出目录存在.
-base_dir="/opt/zequnyu/tweet/"
-store="/opt/zequnyu/tweet/"
+base_dir="/opt/zequnyu/data/"
+store="/opt/zequnyu/data/"
 start=1
-end=11
+end=6
 
 # 执行过程.
 echo "解压缩文件编号从${start}到${end}"
