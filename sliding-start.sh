@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # slaves=("node7 node8 node9 node10 node11 node12 node13 node14 node15")
-slaves=("node3 node7 node8 node9 node11")
+slaves=("node6 node7 node8 node9 node10")
 
-MASTER_URL="spark://node1:7079"
+MASTER_URL="spark://node5:7079"
 SPARK_HOME="/opt/service/spark/slidingwindow"
 
-if [[ $(hostname) = "node1" ]];then
+if [[ $(hostname) = "node5" ]];then
 echo "启动Master"
 chmod 775 ${SPARK_HOME}/sbin/* ${SPARK_HOME}/bin/*
 sh "${SPARK_HOME}/sbin/start-master.sh"
