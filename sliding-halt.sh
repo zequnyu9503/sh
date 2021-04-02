@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-slaves=("node7 node8 node9 node3 node11")
-# slaves=("node1 node7 node8 node9 node10 node11 node12 node13 node14 node15")
-MASTER_URL="spark://node1:7079"
+slaves=("node6 node7 node8 node9 node10")
+
+MASTER_URL="spark://node5:7079"
 SPARK_HOME="/opt/service/spark/slidingwindow"
+
 echo "关闭Workers"
 for slave in ${slaves[@]}
  do
@@ -10,7 +11,7 @@ for slave in ${slaves[@]}
   ssh "root@${slave}" sh "${SPARK_HOME}/sbin/stop-slave.sh"
  done
 
-if [[ $(hostname) = "node1" ]];then
+if [[ $(hostname) = "node5" ]];then
 echo "关闭Master"
 sh "${SPARK_HOME}/sbin/stop-master.sh"
 sh "${SPARK_HOME}/sbin/stop-history-server.sh"
