@@ -15,5 +15,6 @@ spark-submit \
 ${libs_dir}/fastjson-1.2.35.jar,\
 ${libs_dir}/hbase-common-2.1.4.jar,\
 ${libs_dir}/hadoop-common-2.7.7.jar,\
-${libs_dir}/hbase-client-2.1.4.jar \
+${libs_dir}/hbase-client-2.1.4.jar,\
+${libs_dir}/hbase-shaded-miscellaneous-2.1.0.jar \
 ${target}
