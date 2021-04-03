@@ -22,5 +22,6 @@ ${libs_dir}/hbase-shaded-protobuf-2.1.0.jar,\
 ${libs_dir}/hbase-shaded-netty-2.1.0.jar,\
 ${libs_dir}/hbase-protocol-2.1.4.jar,\
 ${libs_dir}/htrace-core4-4.2.0-incubating.jar,\
-${libs_dir}/hbase-mapreduce-2.1.4.jar \
+${libs_dir}/hbase-mapreduce-2.1.4.jar,\
+${libs_dir}/hbase-server-2.1.4.jar \
 ${target}
