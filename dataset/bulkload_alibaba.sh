@@ -5,10 +5,10 @@ target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 
 spark-submit \
 --master spark://node5:7079 \
---executor-memory 8g \
+--executor-memory 16g \
 --executor-cores 16 \
 --driver-cores 16 \
---driver-memory 8g \
+--driver-memory 16g \
 --class pers.yzq.sliding.dataset.BulkLoad_Alibaba \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
