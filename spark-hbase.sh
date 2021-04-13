@@ -11,7 +11,6 @@ spark-shell \
 --driver-memory 16g \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
---jars \
 ${libs_dir}/fastjson-1.2.35.jar,\
 ${libs_dir}/hbase-common-2.1.4.jar,\
 ${libs_dir}/hadoop-common-2.7.7.jar,\
