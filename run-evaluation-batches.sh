@@ -3,6 +3,7 @@ libs_dir="hdfs://node5:9000/libs"
 log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
 target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
 slaves=("node6 node7 node8 node9 node10")
+ca="SWS_WC_HDFS"
 
 spark-submit \
 --master spark://node5:7079 \
@@ -10,10 +11,8 @@ spark-submit \
 --executor-cores 8 \
 --driver-cores 8 \
 --driver-memory 16g \
---class pers.yzq.sliding.evaluation.OS_WC_HBASE \
+--class pers.yzq.sliding.evaluation.${ca} \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
---jars \
---jars \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar,\
 ${libs_dir}/hbase-common-2.1.4.jar,\
