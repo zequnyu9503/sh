@@ -7,8 +7,8 @@ slaves=("node6 node7 node8 node9 node10")
 spark-submit \
 --master spark://node5:7079 \
 --executor-memory 16g \
---executor-cores 16 \
---driver-cores 16 \
+--executor-cores 8 \
+--driver-cores 8 \
 --driver-memory 16g \
 --class pers.yzq.sliding.evaluation.OS_WC_HBASE \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
