@@ -20,6 +20,8 @@ prefetching_mode="parallel"                 # 并发执行数据预取任务.
 prefetching_manager_seriality="*"           # 预取控制器一次性部署所有数据预取任务(缺省).
 prefetching_dependent="true"                # 任务执行器内独立线程池执行数据预取任务.
 prefetching_parallel="4"                    # 并发模式下,数据预取任务的并行度.
+mu_zero="0.6"                               # 权重系数mu的初始值.
+mu_delta="0.2"                              # 权重系数mu的增量.
 #
 # Application parameters.
 #
@@ -59,9 +61,11 @@ ${libs_dir}/hbase-zookeeper-2.1.4.jar \
 ${target} \
 "prefetching.required=${prefetching_required}" \
 "prefetching.manager.strategy=${prefetching_manager_strategy}" \
-"prefetching.manager.mode=${prefetching_mode}" \
+"prefetching.mode=${prefetching_mode}" \
 "prefetching.dependent=${prefetching_dependent}" \
 "prefetching.parallel=${prefetching_parallel}" \
+"mu_zero=${mu_zero}" \
+"mu_delta=${mu_delta}" \
 "overlapping.ratio=${overlapping_ratio}" \
 "storage.system=${storage_sys}" \
 "workload=${workload}" \
