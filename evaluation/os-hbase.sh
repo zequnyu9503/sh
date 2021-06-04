@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
+# 原生Spark系统: 不支持RDD动态更新,不支持数据预取,采用默认的FIFO调度.
+# HBASE依赖包存储于HDFS.
+#
+# Do not modify parameters unless environments are changed.
+#
+home="/opt/service/spark/slidingwindow"
 libs_dir="hdfs://node5:9000/libs"
-log_path="/opt/service/spark/slidingwindow/conf/log4j.properties"
-target="/opt/service/spark/slidingwindow/sliding/target/sliding-2.4.4.jar"
+log_path="${home}/conf/log4j.properties"
+target="${home}/sliding/target/sliding-2.4.4.jar"
 slaves=("node6 node7 node8 node9 node10")
-ca="SWS_M_WC_HDFS"
+# 执行主类.
+ca="OS_HBASE"
 
 spark-submit \
 --master spark://node5:7079 \
 --executor-memory 16g \
 --executor-cores 8 \
 --driver-cores 8 \
---driver-memory 16g \
---class pers.yzq.sliding.evaluation.o5.${ca} \
+--driver-memory 8g \
+--class pers.yzq.sliding.evaluation.${ca} \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar,\
