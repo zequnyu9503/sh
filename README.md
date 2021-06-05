@@ -15,7 +15,7 @@
 - 配置OPENVPN流量转发规则.
 ### evaluation
 - 原生Spark脚本.
-- SW-Spark脚本,可修改相关参数.
+- SW-Spark脚本,可配置相关参数.
 ### version
 - 历史版本Shell脚本.
 ### update.sh
