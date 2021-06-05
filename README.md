@@ -19,4 +19,4 @@
 ### version
 - 历史版本Shell脚本.
 ### update.sh
-- 更新sh工程.
+- 更新sh工程目录.
