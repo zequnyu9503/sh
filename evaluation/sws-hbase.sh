@@ -25,15 +25,17 @@ mu_delta="0.2"                              # 权重系数mu的增量.
 #
 # Application parameters.
 #
-main_class="OS_HBASE"                       # 运行时主类.
+main_class="SWS_HBASE"                      # 运行时主类.
+window_size="2"                             # 滑动窗口大小(unit: hour).
 overlapping_ratio="0.5"                     # 滑动窗口重叠比例(0<r<=1).
 storage_sys="hbase"                         # 存储系统(hdfs,hbase).
 workload="wc"                               # 窗口处理负载(wc,sort,svm).
-run_phase="1"                               # 运行模式(0:滑动窗口计算, 1:聚合计算).
+run_phase="1"                               # 运行模式(0:滑动窗口计算, 1:滑动窗口计算&聚合计算).
 dynamic="true"                              # RDD动态构建机制(true,false).
 prefetch="true"                             # 数据预取机制(true,false).
 sw_scheduler="herf"                         # 滑动窗口作业调度算法(fifo,fair,sjf,herf).
 #
+# Computational resources.
 #
 spark-submit \
 --master spark://node5:7079 \
@@ -66,6 +68,7 @@ ${target} \
 "prefetching.parallel=${prefetching_parallel}" \
 "mu_zero=${mu_zero}" \
 "mu_delta=${mu_delta}" \
+"window.size=${window_size}" \
 "overlapping.ratio=${overlapping_ratio}" \
 "storage.system=${storage_sys}" \
 "workload=${workload}" \
