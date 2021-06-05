@@ -43,7 +43,7 @@ spark-submit \
 --executor-cores 8 \
 --driver-cores 8 \
 --driver-memory 8g \
---class pers.yzq.sliding.evaluation.${mc} \
+--class pers.yzq.sliding.evaluation.${main_class} \
 --driver-java-options "-Dlog4j.configuration=file:${log_path}" \
 --jars \
 ${libs_dir}/fastjson-1.2.35.jar,\
